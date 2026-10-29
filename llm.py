@@ -65,7 +65,7 @@ def _get_client():
     if _client is None:
         if not GROQ_API_KEY:
             raise RuntimeError("GROQ_API_KEY is not set")
-        _client = Groq(api_key=GROQ_API_KEY)
+        _client = Groq(api_key=GROQ_API_KEY.strip(), timeout=60.0, max_retries=2)
     return _client
 
 
@@ -135,10 +135,13 @@ def _call_groq(text: str, max_retries: int) -> dict:
                 continue
             return {"_error": "LLM returned invalid JSON", "_raw": content[:500]}
         except Exception as e:
+            cause = repr(getattr(e, "__cause__", None))
+            print(f"[LLM ERROR] {type(e).__name__}: {e} | cause={cause} | "
+                  f"model={GROQ_MODEL!r} | key_len={len(GROQ_API_KEY)}", flush=True)
             if attempt < max_retries:
                 time.sleep(1.5 * (attempt + 1))
                 continue
-            return {"_error": str(e)}
+            return {"_error": f"{e} ({type(e).__name__}: {cause})"}
 
 
 def _merge_results(results: list[dict]) -> dict:
