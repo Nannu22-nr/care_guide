@@ -14,14 +14,17 @@ documents against each other.
 * Python 3.10+
 * Tesseract OCR on `PATH` (images / scanned PDFs)
 * A Groq API key (LLM extraction)
+* Optional: `sentence-transformers` for semantic search (large, needs ~1 GB RAM).
+  It is only in `requirements-dev.txt`; if it is not installed, semantic search is
+  disabled automatically and the API falls back to keyword search.
 
 ## Run locally
 
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-Copy-Item .env.example .env      # then set GROQ_API_KEY (and API_KEY, see Security)
+pip install -r requirements-dev.txt   # runtime + tests + optional semantic search
+Copy-Item .env.example .env           # then set GROQ_API_KEY (and API_KEY, see Security)
 uvicorn app:app --reload
 ```
 
@@ -69,6 +72,7 @@ All endpoints except `/`, `/api/health` and `/api/config` need the API key when 
 ## Tests
 
 ```bash
+pip install -r requirements-dev.txt
 python -m pytest
 ```
 
@@ -84,6 +88,14 @@ python evaluation/run_eval.py --sleep 2  # live LLM; writes results.json + REPOR
 
 `REPORT.md` is generated from the run (accuracy per field, invented-value count, success/failure/review
 rates, p50/p95 time). It makes live LLM requests and may incur provider usage.
+
+## Deploying on a small host (e.g. Render free tier, 512 MB RAM)
+
+* Use the included `Dockerfile` (it installs Tesseract) and `requirements.txt` (no torch).
+* Set environment variables: `GROQ_API_KEY`, `API_KEY`, `ENABLE_SEMANTIC_SEARCH=false`,
+  `WORKER_THREADS=1`, `MAX_FILE_MB=10`.
+* Free tiers have an ephemeral disk: uploaded files and the SQLite database are lost on
+  restart/redeploy, and the service sleeps when idle (first request can take ~1 minute).
 
 ## Security
 

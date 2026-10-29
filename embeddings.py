@@ -1,17 +1,3 @@
-"""Semantic search with sentence-transformers + a numpy cosine index.
-
-Design notes
-------------
-* Embeddings are stored in the `chunks.embedding` column (float32 bytes), so
-  the in-memory index can be rebuilt after a restart WITHOUT re-running the
-  model. Previously every new document re-embedded every chunk (O(n^2)) and the
-  index was empty after a restart.
-* Vectors are L2-normalised, so cosine similarity == dot product. For the
-  data sizes of this project (<= ~1e5 chunks) a brute-force numpy matrix
-  product is fast and removes the faiss dependency.
-* sentence-transformers is optional; if it is missing, semantic search is
-  disabled and the API falls back to keyword search.
-"""
 import threading
 
 import numpy as np
@@ -26,11 +12,9 @@ _model = None
 _matrix: np.ndarray | None = None      # shape (n_chunks, dim), float32, normalised
 _chunk_ids: list[int] = []
 
-try:
-    from sentence_transformers import SentenceTransformer  # noqa
-    _HAS_ST = True
-except ImportError:
-    _HAS_ST = False
+import importlib.util
+
+_HAS_ST = importlib.util.find_spec("sentence_transformers") is not None
 
 ENABLE_SEMANTIC_SEARCH = ENABLE_SEMANTIC_SEARCH and _HAS_ST
 
@@ -40,6 +24,7 @@ def _get_model():
     if _model is None:
         if not _HAS_ST:
             raise RuntimeError("sentence-transformers not installed")
+        from sentence_transformers import SentenceTransformer  # lazy import
         _model = SentenceTransformer(EMBEDDING_MODEL)
     return _model
 

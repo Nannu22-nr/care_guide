@@ -1,0 +1,7 @@
+# Local development: runtime deps + tests + optional semantic search
+-r requirements.txt
+pytest
+httpx
+# Optional (large: pulls in torch). Without it, semantic search is disabled
+# automatically and the API falls back to keyword search.
+sentence-transformers
