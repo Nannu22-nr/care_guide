@@ -1,0 +1,806 @@
+{
+  "pdf_INV-2000.pdf": {
+    "invoice_number": "INV-2000",
+    "invoice_date": "2024-05-22",
+    "supplier_name": "Acme Corp",
+    "customer_name": "Blue Ocean Co",
+    "subtotal": 827.45,
+    "tax": 82.75,
+    "total": 910.2,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Printer paper A4",
+        "quantity": 5,
+        "unit_price": 165.49,
+        "amount": 827.45
+      }
+    ]
+  },
+  "pdf_INV-2001.pdf": {
+    "invoice_number": "INV-2001",
+    "invoice_date": "2024-10-11",
+    "supplier_name": "Northwind Traders",
+    "customer_name": "Beta Ltd",
+    "subtotal": 6337.08,
+    "tax": 633.71,
+    "total": 6970.79,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Widget A",
+        "quantity": 7,
+        "unit_price": 25.82,
+        "amount": 180.74
+      },
+      {
+        "description": "Printer paper A4",
+        "quantity": 2,
+        "unit_price": 148.28,
+        "amount": 296.56
+      },
+      {
+        "description": "Widget A",
+        "quantity": 9,
+        "unit_price": 399.53,
+        "amount": 3595.77
+      },
+      {
+        "description": "LED panel",
+        "quantity": 9,
+        "unit_price": 135.31,
+        "amount": 1217.79
+      },
+      {
+        "description": "Cotton fabric (m)",
+        "quantity": 7,
+        "unit_price": 149.46,
+        "amount": 1046.22
+      }
+    ]
+  },
+  "pdf_INV-2002.pdf": {
+    "invoice_number": "INV-2002",
+    "invoice_date": "2024-12-18",
+    "supplier_name": "Globex Ltd",
+    "customer_name": "Gamma Inc",
+    "subtotal": 1444.99,
+    "tax": 144.5,
+    "total": 1589.49,
+    "currency": "BDT",
+    "line_items": [
+      {
+        "description": "Printer paper A4",
+        "quantity": 5,
+        "unit_price": 106.89,
+        "amount": 534.45
+      },
+      {
+        "description": "Widget B",
+        "quantity": 6,
+        "unit_price": 71.98,
+        "amount": 431.88
+      },
+      {
+        "description": "Consulting hour",
+        "quantity": 7,
+        "unit_price": 68.38,
+        "amount": 478.66
+      }
+    ]
+  },
+  "pdf_INV-2003.pdf": {
+    "invoice_number": "INV-2003",
+    "invoice_date": "2024-10-23",
+    "supplier_name": "Initech LLC",
+    "customer_name": "Delta Retail",
+    "subtotal": 3885.04,
+    "tax": 388.5,
+    "total": 4273.54,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Packaging service",
+        "quantity": 9,
+        "unit_price": 86.8,
+        "amount": 781.2
+      },
+      {
+        "description": "USB-C cable",
+        "quantity": 2,
+        "unit_price": 366.78,
+        "amount": 733.56
+      },
+      {
+        "description": "Printer paper A4",
+        "quantity": 6,
+        "unit_price": 383.37,
+        "amount": 2300.22
+      },
+      {
+        "description": "Printer paper A4",
+        "quantity": 2,
+        "unit_price": 35.03,
+        "amount": 70.06
+      }
+    ]
+  },
+  "pdf_INV-2004.pdf": {
+    "invoice_number": "INV-2004",
+    "invoice_date": "2025-06-30",
+    "supplier_name": "Umbrella Supplies",
+    "customer_name": "Gamma Inc",
+    "subtotal": 4838.7,
+    "tax": 483.87,
+    "total": 5322.57,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Consulting hour",
+        "quantity": 5,
+        "unit_price": 302.14,
+        "amount": 1510.7
+      },
+      {
+        "description": "Consulting hour",
+        "quantity": 3,
+        "unit_price": 247.6,
+        "amount": 742.8
+      },
+      {
+        "description": "USB-C cable",
+        "quantity": 4,
+        "unit_price": 444.2,
+        "amount": 1776.8
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 2,
+        "unit_price": 404.2,
+        "amount": 808.4
+      }
+    ]
+  },
+  "pdf_INV-2005.pdf": {
+    "invoice_number": "INV-2005",
+    "invoice_date": "2024-03-08",
+    "supplier_name": "Stark Industries",
+    "customer_name": "Gamma Inc",
+    "subtotal": 4850.51,
+    "tax": 485.05,
+    "total": 5335.56,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "LED panel",
+        "quantity": 7,
+        "unit_price": 181.91,
+        "amount": 1273.37
+      },
+      {
+        "description": "Consulting hour",
+        "quantity": 4,
+        "unit_price": 453.66,
+        "amount": 1814.64
+      },
+      {
+        "description": "Widget A",
+        "quantity": 1,
+        "unit_price": 155.1,
+        "amount": 155.1
+      },
+      {
+        "description": "USB-C cable",
+        "quantity": 6,
+        "unit_price": 267.9,
+        "amount": 1607.4
+      }
+    ]
+  },
+  "pdf_INV-2006.pdf": {
+    "invoice_number": "INV-2006",
+    "invoice_date": "2024-09-09",
+    "supplier_name": "Wayne Logistics",
+    "customer_name": "Meghna Traders",
+    "subtotal": 2650.01,
+    "tax": 265.0,
+    "total": 2915.01,
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Cotton fabric (m)",
+        "quantity": 8,
+        "unit_price": 264.28,
+        "amount": 2114.24
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 3,
+        "unit_price": 178.59,
+        "amount": 535.77
+      }
+    ]
+  },
+  "pdf_INV-2007.pdf": {
+    "invoice_number": "INV-2007",
+    "invoice_date": "2024-03-06",
+    "supplier_name": "Hooli Systems",
+    "customer_name": "Meghna Traders",
+    "subtotal": 7989.92,
+    "tax": 798.99,
+    "total": 8788.91,
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Packaging service",
+        "quantity": 7,
+        "unit_price": 387.42,
+        "amount": 2711.94
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 6,
+        "unit_price": 148.73,
+        "amount": 892.38
+      },
+      {
+        "description": "Widget B",
+        "quantity": 9,
+        "unit_price": 328.43,
+        "amount": 2955.87
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 1,
+        "unit_price": 76.85,
+        "amount": 76.85
+      },
+      {
+        "description": "Packaging service",
+        "quantity": 3,
+        "unit_price": 450.96,
+        "amount": 1352.88
+      }
+    ]
+  },
+  "pdf_hard_INV-2008.pdf": {
+    "invoice_number": "INV-2008",
+    "invoice_date": "2024-09-26",
+    "supplier_name": "Dhaka Fresh Foods",
+    "customer_name": "Sundarban Mart",
+    "subtotal": 6168.35,
+    "tax": null,
+    "total": 6168.35,
+    "currency": "BDT",
+    "line_items": [
+      {
+        "description": "Widget A",
+        "quantity": 5,
+        "unit_price": 367.56,
+        "amount": 1837.8
+      },
+      {
+        "description": "LED panel",
+        "quantity": 2,
+        "unit_price": 451.76,
+        "amount": 903.52
+      },
+      {
+        "description": "Consulting hour",
+        "quantity": 5,
+        "unit_price": 425.06,
+        "amount": 2125.3
+      },
+      {
+        "description": "Packaging service",
+        "quantity": 2,
+        "unit_price": 197.34,
+        "amount": 394.68
+      },
+      {
+        "description": "Widget A",
+        "quantity": 3,
+        "unit_price": 302.35,
+        "amount": 907.05
+      }
+    ]
+  },
+  "pdf_hard_INV-2009.pdf": {
+    "invoice_number": "INV-2009",
+    "invoice_date": "2024-04-24",
+    "supplier_name": "Padma Textiles",
+    "customer_name": null,
+    "subtotal": 10340.9,
+    "tax": 1034.09,
+    "total": 11374.99,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "USB-C cable",
+        "quantity": 2,
+        "unit_price": 414.79,
+        "amount": 829.58
+      },
+      {
+        "description": "Printer paper A4",
+        "quantity": 9,
+        "unit_price": 404.09,
+        "amount": 3636.81
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 3,
+        "unit_price": 250.04,
+        "amount": 750.12
+      },
+      {
+        "description": "Widget A",
+        "quantity": 9,
+        "unit_price": 352.57,
+        "amount": 3173.13
+      },
+      {
+        "description": "Widget A",
+        "quantity": 6,
+        "unit_price": 325.21,
+        "amount": 1951.26
+      }
+    ]
+  },
+  "img_INV-2010.png": {
+    "invoice_number": "INV-2010",
+    "invoice_date": "2024-03-28",
+    "supplier_name": "Acme Corp",
+    "customer_name": "Delta Retail",
+    "subtotal": 1507.28,
+    "tax": 150.73,
+    "total": 1658.01,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Widget B",
+        "quantity": 4,
+        "unit_price": 376.82,
+        "amount": 1507.28
+      }
+    ]
+  },
+  "img_INV-2011.png": {
+    "invoice_number": "INV-2011",
+    "invoice_date": "2025-03-24",
+    "supplier_name": "Northwind Traders",
+    "customer_name": "Sundarban Mart",
+    "subtotal": 7675.2,
+    "tax": 767.52,
+    "total": 8442.72,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Cotton fabric (m)",
+        "quantity": 3,
+        "unit_price": 89.14,
+        "amount": 267.42
+      },
+      {
+        "description": "USB-C cable",
+        "quantity": 9,
+        "unit_price": 113.21,
+        "amount": 1018.89
+      },
+      {
+        "description": "Packaging service",
+        "quantity": 9,
+        "unit_price": 402.53,
+        "amount": 3622.77
+      },
+      {
+        "description": "Printer paper A4",
+        "quantity": 4,
+        "unit_price": 358.43,
+        "amount": 1433.72
+      },
+      {
+        "description": "Consulting hour",
+        "quantity": 5,
+        "unit_price": 266.48,
+        "amount": 1332.4
+      }
+    ]
+  },
+  "img_INV-2012.png": {
+    "invoice_number": "INV-2012",
+    "invoice_date": "2024-08-23",
+    "supplier_name": "Globex Ltd",
+    "customer_name": "Sundarban Mart",
+    "subtotal": 578.39,
+    "tax": 57.84,
+    "total": 636.23,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Consulting hour",
+        "quantity": 4,
+        "unit_price": 46.96,
+        "amount": 187.84
+      },
+      {
+        "description": "LED panel",
+        "quantity": 1,
+        "unit_price": 390.55,
+        "amount": 390.55
+      }
+    ]
+  },
+  "img_INV-2013.png": {
+    "invoice_number": "INV-2013",
+    "invoice_date": "2024-02-02",
+    "supplier_name": "Initech LLC",
+    "customer_name": "Gamma Inc",
+    "subtotal": 155.03,
+    "tax": 15.5,
+    "total": 170.53,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Widget B",
+        "quantity": 1,
+        "unit_price": 155.03,
+        "amount": 155.03
+      }
+    ]
+  },
+  "scan_INV-2014.png": {
+    "invoice_number": "INV-2014",
+    "invoice_date": "2025-02-20",
+    "supplier_name": "Umbrella Supplies",
+    "customer_name": "Beta Ltd",
+    "subtotal": 3914.35,
+    "tax": 391.44,
+    "total": 4305.79,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "LED panel",
+        "quantity": 8,
+        "unit_price": 145.4,
+        "amount": 1163.2
+      },
+      {
+        "description": "Maintenance fee",
+        "quantity": 3,
+        "unit_price": 479.05,
+        "amount": 1437.15
+      },
+      {
+        "description": "Cotton fabric (m)",
+        "quantity": 8,
+        "unit_price": 164.25,
+        "amount": 1314.0
+      }
+    ]
+  },
+  "scan_INV-2015.png": {
+    "invoice_number": "INV-2015",
+    "invoice_date": "2025-05-31",
+    "supplier_name": "Stark Industries",
+    "customer_name": "Sundarban Mart",
+    "subtotal": 1186.47,
+    "tax": 118.65,
+    "total": 1305.12,
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Maintenance fee",
+        "quantity": 9,
+        "unit_price": 131.83,
+        "amount": 1186.47
+      }
+    ]
+  },
+  "scan_INV-2016.png": {
+    "invoice_number": "INV-2016",
+    "invoice_date": "2025-05-13",
+    "supplier_name": "Wayne Logistics",
+    "customer_name": "Meghna Traders",
+    "subtotal": 377.09,
+    "tax": 37.71,
+    "total": 414.8,
+    "currency": "GBP",
+    "line_items": [
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 1,
+        "unit_price": 166.91,
+        "amount": 166.91
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 6,
+        "unit_price": 35.03,
+        "amount": 210.18
+      }
+    ]
+  },
+  "scan_INV-2017.png": {
+    "invoice_number": "INV-2017",
+    "invoice_date": "2025-05-18",
+    "supplier_name": "Hooli Systems",
+    "customer_name": "Meghna Traders",
+    "subtotal": 3111.73,
+    "tax": 311.17,
+    "total": 3422.9,
+    "currency": "BDT",
+    "line_items": [
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 5,
+        "unit_price": 113.33,
+        "amount": 566.65
+      },
+      {
+        "description": "Cotton fabric (m)",
+        "quantity": 6,
+        "unit_price": 406.94,
+        "amount": 2441.64
+      },
+      {
+        "description": "Printer paper A4",
+        "quantity": 4,
+        "unit_price": 25.86,
+        "amount": 103.44
+      }
+    ]
+  },
+  "scanpdf_INV-2018.pdf": {
+    "invoice_number": "INV-2018",
+    "invoice_date": "2024-08-20",
+    "supplier_name": "Dhaka Fresh Foods",
+    "customer_name": "Beta Ltd",
+    "subtotal": 3717.51,
+    "tax": 371.75,
+    "total": 4089.26,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Widget B",
+        "quantity": 7,
+        "unit_price": 296.36,
+        "amount": 2074.52
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 2,
+        "unit_price": 267.32,
+        "amount": 534.64
+      },
+      {
+        "description": "Consulting hour",
+        "quantity": 6,
+        "unit_price": 137.92,
+        "amount": 827.52
+      },
+      {
+        "description": "Maintenance fee",
+        "quantity": 3,
+        "unit_price": 93.61,
+        "amount": 280.83
+      }
+    ]
+  },
+  "scanpdf_INV-2019.pdf": {
+    "invoice_number": "INV-2019",
+    "invoice_date": "2024-08-22",
+    "supplier_name": "Padma Textiles",
+    "customer_name": "Sundarban Mart",
+    "subtotal": 5310.17,
+    "tax": 531.02,
+    "total": 5841.19,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Printer paper A4",
+        "quantity": 8,
+        "unit_price": 262.4,
+        "amount": 2099.2
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 3,
+        "unit_price": 406.06,
+        "amount": 1218.18
+      },
+      {
+        "description": "Printer paper A4",
+        "quantity": 4,
+        "unit_price": 296.72,
+        "amount": 1186.88
+      },
+      {
+        "description": "Consulting hour",
+        "quantity": 3,
+        "unit_price": 139.59,
+        "amount": 418.77
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 2,
+        "unit_price": 193.57,
+        "amount": 387.14
+      }
+    ]
+  },
+  "xlsx_INV-2020.xlsx": {
+    "invoice_number": "INV-2020",
+    "invoice_date": "2025-05-27",
+    "supplier_name": "Acme Corp",
+    "customer_name": "Meghna Traders",
+    "subtotal": 3630.86,
+    "tax": 363.09,
+    "total": 3993.95,
+    "currency": "BDT",
+    "line_items": [
+      {
+        "description": "Widget A",
+        "quantity": 8,
+        "unit_price": 258.06,
+        "amount": 2064.48
+      },
+      {
+        "description": "Steel bolts (box)",
+        "quantity": 2,
+        "unit_price": 297.64,
+        "amount": 595.28
+      },
+      {
+        "description": "LED panel",
+        "quantity": 2,
+        "unit_price": 407.88,
+        "amount": 815.76
+      },
+      {
+        "description": "Maintenance fee",
+        "quantity": 3,
+        "unit_price": 51.78,
+        "amount": 155.34
+      }
+    ]
+  },
+  "xlsx_INV-2021.xlsx": {
+    "invoice_number": "INV-2021",
+    "invoice_date": "2025-06-12",
+    "supplier_name": "Northwind Traders",
+    "customer_name": "Meghna Traders",
+    "subtotal": 2795.2,
+    "tax": 279.52,
+    "total": 3074.72,
+    "currency": "BDT",
+    "line_items": [
+      {
+        "description": "Consulting hour",
+        "quantity": 2,
+        "unit_price": 289.2,
+        "amount": 578.4
+      },
+      {
+        "description": "LED panel",
+        "quantity": 8,
+        "unit_price": 277.1,
+        "amount": 2216.8
+      }
+    ]
+  },
+  "xlsx_INV-2022.xlsx": {
+    "invoice_number": "INV-2022",
+    "invoice_date": "2024-04-21",
+    "supplier_name": "Globex Ltd",
+    "customer_name": "Meghna Traders",
+    "subtotal": 4823.83,
+    "tax": 482.38,
+    "total": 5306.21,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Cotton fabric (m)",
+        "quantity": 8,
+        "unit_price": 240.09,
+        "amount": 1920.72
+      },
+      {
+        "description": "Widget B",
+        "quantity": 7,
+        "unit_price": 414.73,
+        "amount": 2903.11
+      }
+    ]
+  },
+  "csv_INV-2023.csv": {
+    "invoice_number": "INV-2023",
+    "invoice_date": "2025-06-03",
+    "supplier_name": "Initech LLC",
+    "customer_name": "Gamma Inc",
+    "subtotal": 2452.38,
+    "tax": 245.24,
+    "total": 2697.62,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Cotton fabric (m)",
+        "quantity": 6,
+        "unit_price": 408.73,
+        "amount": 2452.38
+      }
+    ]
+  },
+  "csv_INV-2024.csv": {
+    "invoice_number": "INV-2024",
+    "invoice_date": "2024-06-28",
+    "supplier_name": "Umbrella Supplies",
+    "customer_name": "Delta Retail",
+    "subtotal": 3456.13,
+    "tax": 345.61,
+    "total": 3801.74,
+    "currency": "EUR",
+    "line_items": [
+      {
+        "description": "Consulting hour",
+        "quantity": 3,
+        "unit_price": 248.49,
+        "amount": 745.47
+      },
+      {
+        "description": "Packaging service",
+        "quantity": 4,
+        "unit_price": 173.2,
+        "amount": 692.8
+      },
+      {
+        "description": "Packaging service",
+        "quantity": 2,
+        "unit_price": 419.97,
+        "amount": 839.94
+      },
+      {
+        "description": "Widget A",
+        "quantity": 6,
+        "unit_price": 26.72,
+        "amount": 160.32
+      },
+      {
+        "description": "Widget A",
+        "quantity": 6,
+        "unit_price": 169.6,
+        "amount": 1017.6
+      }
+    ]
+  },
+  "csv_INV-2025.csv": {
+    "invoice_number": "INV-2025",
+    "invoice_date": "2024-09-01",
+    "supplier_name": "Stark Industries",
+    "customer_name": "Gamma Inc",
+    "subtotal": 3910.37,
+    "tax": 391.04,
+    "total": 4301.41,
+    "currency": "USD",
+    "line_items": [
+      {
+        "description": "Maintenance fee",
+        "quantity": 6,
+        "unit_price": 307.68,
+        "amount": 1846.08
+      },
+      {
+        "description": "USB-C cable",
+        "quantity": 5,
+        "unit_price": 303.94,
+        "amount": 1519.7
+      },
+      {
+        "description": "Packaging service",
+        "quantity": 9,
+        "unit_price": 60.51,
+        "amount": 544.59
+      }
+    ]
+  }
+}

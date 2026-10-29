@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Care Guide | Document Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="logo">CG</div>
+    <div>
+      <h1>Care Guide</h1>
+      <p class="muted">AI Document Intelligence</p>
+    </div>
+  </div>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <button class="btn ghost small" id="apiKeyBtn" style="display:none;">🔑 API key</button>
+    <div class="status-badge" id="healthBadge">● Checking…</div>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Automate Your Invoice Processing</h2>
+    <p>Extract, validate, and reconcile thousands of documents in seconds with AI precision.</p>
+  </section>
+
+  <!-- Upload & Stats Section -->
+  <section class="upload-stats-grid">
+    
+    <!-- Upload Card -->
+    <div class="card upload-card">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:16px;">
+        <div>
+          <h2>Upload Documents</h2>
+          <p class="muted">Supported formats: PDF, JPG, PNG, TIFF, XLSX, XLS, CSV.</p>
+        </div>
+      </div>
+      
+      <div id="dropzone" class="dropzone">
+        <input type="file" id="fileInput" multiple accept=".pdf,.jpg,.jpeg,.png,.tiff,.tif,.xlsx,.xls,.csv" hidden />
+        <div class="dropzone-inner">
+          <div class="dropzone-icon">☁️</div>
+          <p style="font-weight: 600; color: var(--text); margin-bottom: 4px;">Click or drag & drop files</p>
+          <span class="muted" style="font-size: 0.8rem;">Max file size: 50MB</span>
+        </div>
+      </div>
+      
+      <div id="fileList" class="file-list" style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;"></div>
+      
+      <button id="uploadBtn" class="btn primary" style="margin-top: 16px; width: 100%; padding: 14px;" disabled>Process Files</button>
+    </div>
+
+    <!-- Features / Stats Side Panel -->
+    <div class="side-panel">
+      <div class="stat-card">
+        <div class="stat-icon">⚡</div>
+        <div>
+          <h3>Fast OCR & AI</h3>
+          <p>Powered by Groq & PyMuPDF for lightning-fast extraction.</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🛡️</div>
+        <div>
+          <h3>Automated Validation</h3>
+          <p>Instantly checks for math errors, missing fields, and duplicates.</p>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🔍</div>
+        <div>
+          <h3>Smart Search</h3>
+          <p>Find any invoice instantly using keyword or semantic search.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Cross Verification Button -->
+  <div style="margin-bottom: 24px; display: flex; justify-content: flex-end;">
+    <button class="btn ghost" id="reconcileBtn" style="border: 1px solid var(--primary); color: var(--primary);">
+      🔄 Cross-Verify All Invoices
+    </button>
+  </div>
+
+  <!-- Bottom Section: Split View (List + Details) -->
+  <section class="split-section">
+    
+    <!-- Left Column: Job List -->
+    <div class="list-column">
+      <div class="card">
+        <div class="card-header">
+          <h2>Processed Documents</h2>
+          <button class="btn ghost small" id="refreshBtn">↻ Refresh</button>
+        </div>
+        <div id="searchBar" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
+          <input id="searchInput" class="field-input" placeholder="Search invoices, suppliers, text…"
+                 style="flex:2; min-width:160px; padding:8px;" />
+          <select id="searchMode" class="field-input" style="flex:1; min-width:110px; padding:8px;">
+            <option value="keyword">Keyword</option>
+            <option value="semantic">Semantic</option>
+          </select>
+          <select id="searchStatus" class="field-input" style="flex:1; min-width:110px; padding:8px;">
+            <option value="">All status</option>
+            <option value="ok">OK</option>
+            <option value="needs_review">Needs review</option>
+            <option value="failed">Failed</option>
+            <option value="processing">Processing</option>
+            <option value="queued">Queued</option>
+          </select>
+          <button class="btn primary small" id="searchBtn">Search</button>
+          <button class="btn ghost small" id="searchClear" style="display:none;">✕ Clear</button>
+        </div>
+        <div id="searchInfo" class="muted" style="margin-bottom:8px; display:none;"></div>
+        <div id="jobsList" class="jobs-list">
+          <p class="muted center">No jobs yet. Upload files above to get started.</p>
+        </div>
+        <div class="pager">
+          <button class="btn ghost small" id="prevPage">← Prev</button>
+          <span id="pageInfo" class="muted" style="font-weight:500;">Page 1</span>
+          <button class="btn ghost small" id="nextPage">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: Details Output -->
+    <div class="detail-column">
+      <div class="card empty-state" id="detailCard">
+        <div class="empty-icon">📄</div>
+        <h3>No Document Selected</h3>
+        <p class="muted">Select a document from the left list to view its extracted details.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

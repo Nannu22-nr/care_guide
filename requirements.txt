@@ -1,0 +1,23 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic
+groq
+pdfplumber
+PyMuPDF
+pytesseract
+pillow
+pandas
+openpyxl
+xlrd
+python-dotenv
+jinja2
+aiofiles
+numpy
+opencv-python-headless
+slowapi
+python-magic-bin ; sys_platform == "win32"
+python-magic ; sys_platform != "win32"
+sentence-transformers
+pytest
+httpx

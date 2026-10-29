@@ -1,0 +1,23 @@
+__pycache__/
+*.pyc
+.env
+data/
+*.db
+*.sqlite3
+.pytest_cache/
+.venv/
+htmlcov/
+.coverage
+*.egg-info/
+node_modules/
+.DS_Store
+*.log
+# generated evaluation dataset can be recreated with evaluation/make_dataset.py
+evaluation/dataset/*.pdf
+evaluation/dataset/*.jpg
+evaluation/dataset/*.png
+evaluation/dataset/*.xlsx
+evaluation/dataset/*.csv
+evaluation/results.json
+
+venv/
