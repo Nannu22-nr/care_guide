@@ -1,4 +1,3 @@
-"""Document processing: digital PDF, scanned/OCR, images, spreadsheets, corruption."""
 import io
 import shutil
 

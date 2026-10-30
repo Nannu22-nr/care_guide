@@ -1,4 +1,3 @@
-"""Cross-verification: PDF↔PDF and PDF↔Excel/CSV."""
 from collections import defaultdict
 
 

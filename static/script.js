@@ -1,6 +1,4 @@
-// =====================================================================
-// Care Guide - Document Intelligence UI (vanilla JS, served by FastAPI)
-// =====================================================================
+
 let selectedFiles = [];
 let pollInterval = null;
 let currentSelectedJobId = null;
@@ -24,9 +22,6 @@ const uploadBtn = $('uploadBtn');
 const jobsList = $('jobsList');
 const detailCard = $('detailCard');
 
-// ---------------------------------------------------------------------
-// API key handling (only used when the server has API_KEY configured)
-// ---------------------------------------------------------------------
 const getKey = () => sessionStorage.getItem('apiKey') || '';
 
 function askForKey(msg) {
@@ -56,9 +51,6 @@ async function apiFetch(url, opts = {}) {
   return res;
 }
 
-// ---------------------------------------------------------------------
-// Health + config
-// ---------------------------------------------------------------------
 fetch('/api/health').then(r => r.json()).then(d => {
   const b = $('healthBadge');
   b.textContent = d.status === 'ok' ? '● System online' : '● Degraded';
@@ -73,9 +65,6 @@ fetch('/api/config').then(r => r.json()).then(cfg => {
   }
 }).catch(() => {});
 
-// ---------------------------------------------------------------------
-// Upload
-// ---------------------------------------------------------------------
 dropzone.addEventListener('click', () => fileInput.click());
 dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.classList.add('dragover'); });
 dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
@@ -140,9 +129,7 @@ uploadBtn.addEventListener('click', async () => {
   }
 });
 
-// ---------------------------------------------------------------------
-// Jobs list (left)
-// ---------------------------------------------------------------------
+
 async function loadJobs() {
   if (searchActive) return;   // do not overwrite search results
   try {
@@ -226,9 +213,6 @@ $('refreshBtn').onclick = refreshList;
 $('prevPage').onclick = () => { if (pageOffset >= PAGE_SIZE) { pageOffset -= PAGE_SIZE; loadJobs(); } };
 $('nextPage').onclick = () => { pageOffset += PAGE_SIZE; loadJobs(); };
 
-// ---------------------------------------------------------------------
-// Polling: keeps list + the open document's progress up to date
-// ---------------------------------------------------------------------
 function startPolling() {
   if (pollInterval) return;
   pollInterval = setInterval(async () => {
@@ -253,9 +237,6 @@ function startPolling() {
   }, 2500);
 }
 
-// ---------------------------------------------------------------------
-// Search (keyword / semantic + status filter)
-// ---------------------------------------------------------------------
 async function runSearch() {
   const q = $('searchInput').value.trim();
   const mode = $('searchMode').value;
@@ -296,9 +277,6 @@ $('searchClear').onclick = () => clearSearch(true);
 $('searchInput').addEventListener('keydown', (e) => { if (e.key === 'Enter') runSearch(); });
 $('searchStatus').addEventListener('change', runSearch);
 
-// ---------------------------------------------------------------------
-// Job detail (right)
-// ---------------------------------------------------------------------
 const sectionTitle = (t, extra = '') =>
   `<h3 style="font-size:0.85rem; text-transform:uppercase; color:var(--muted); margin-bottom:12px;">${t}${extra}</h3>`;
 
@@ -551,9 +529,6 @@ function inlineEdit(fieldEl, jobId) {
   };
 }
 
-// ---------------------------------------------------------------------
-// Cross-verification (reconcile)
-// ---------------------------------------------------------------------
 $('reconcileBtn')?.addEventListener('click', async () => {
   if (!confirm("This will compare all processed invoices to find mismatches. Continue?")) return;
 
@@ -589,9 +564,6 @@ $('reconcileBtn')?.addEventListener('click', async () => {
   }
 });
 
-// ---------------------------------------------------------------------
-// Utils
-// ---------------------------------------------------------------------
 function escapeHtml(s) {
   return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }

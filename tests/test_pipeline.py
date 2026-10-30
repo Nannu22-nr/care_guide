@@ -1,4 +1,3 @@
-"""End-to-end pipeline tests with the LLM mocked (no network, no cost)."""
 import copy
 import json
 

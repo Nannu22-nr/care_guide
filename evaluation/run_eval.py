@@ -1,16 +1,4 @@
-"""
-Evaluation harness: measures extraction accuracy, speed and reliability on a
-labelled dataset, using the REAL pipeline (OCR + live LLM).
 
-Usage
------
-    python evaluation/make_dataset.py          # (re)generate the labelled dataset
-    export GROQ_API_KEY=...                    # live LLM calls -> provider usage applies
-    python evaluation/run_eval.py [--sleep 2]  # writes results.json and REPORT.md
-
-Every number in REPORT.md is produced by this script from an actual run.
-Nothing is estimated or hard-coded.
-"""
 import argparse
 import json
 import math

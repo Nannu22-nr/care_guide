@@ -17,9 +17,7 @@ except Exception:
 
 MAX_PAGES = 5000
 OCR_DPI = 250
-# If plain OCR already reads the page with at least this mean word confidence,
-# we keep it. Aggressive denoise/binarisation can *damage* clean images
-# (measured: "INV-2010" became "INV-2016"), so preprocessing is only a fallback.
+
 GOOD_OCR_CONFIDENCE = 80.0
 
 

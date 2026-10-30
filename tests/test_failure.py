@@ -1,4 +1,3 @@
-"""Failure scenarios at the API boundary."""
 import pytest
 from fastapi.testclient import TestClient
 

@@ -1,4 +1,3 @@
-"""The scoring code itself must be correct, or the reported metrics are worthless."""
 import importlib.util
 from pathlib import Path
 

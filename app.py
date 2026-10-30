@@ -1,12 +1,3 @@
-"""
-AI-Powered Document Intelligence System - FastAPI application.
-
-Defensive design:
-- slowapi (rate limiting) is optional   -> falls back to a no-op decorator
-- python-magic (MIME sniffing) optional -> falls back to extension-only checks
-- sentence-transformers (semantic search) optional -> falls back to keyword search
-"""
-
 import hashlib
 import json
 import os

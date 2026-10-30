@@ -1,4 +1,3 @@
-"""File content validation & safety checks."""
 import magic
 from config import ALLOWED_MIME_PREFIXES, ALLOWED_EXTENSIONS
 from pathlib import Path

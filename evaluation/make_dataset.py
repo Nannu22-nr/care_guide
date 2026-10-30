@@ -1,13 +1,3 @@
-"""Generate a labelled synthetic invoice dataset (PDF / PNG / XLSX / CSV).
-
-Why synthetic: labels are exact by construction, so measured accuracy is real.
-Run:  python evaluation/make_dataset.py   (deterministic, seed=42)
-
-It writes the files into evaluation/dataset/ and ground_truth.json next to them.
-Documents are deliberately varied: different layouts, currencies, date formats,
-a rotated/noisy "scan", a multi-sheet workbook, and a few hard cases
-(missing tax, missing customer) where the correct answer is `null`.
-"""
 import io
 import json
 import random
@@ -57,7 +47,7 @@ def make_invoice(i, *, tax_rate=Decimal("0.10"), hide_tax=False, hide_customer=F
         "supplier_name": supplier,
         "customer_name": customer,
         "subtotal": float(subtotal),
-        "tax": None if hide_tax else float(tax),   # no tax printed -> truth is null
+        "tax": None if hide_tax else float(tax),  
         "total": float(total),
         "currency": cur, "sym": sym,
         "line_items": items,

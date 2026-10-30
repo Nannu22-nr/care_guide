@@ -1,11 +1,3 @@
-"""Simple API-key auth.
-
-The key may be sent as the `X-API-Key` header (used by fetch/curl) or as an
-`api_key` query parameter (needed for <img>/<iframe>/<a download> previews,
-which cannot set custom headers).
-
-If no API_KEY is configured, auth is disabled (development mode).
-"""
 import secrets
 
 from fastapi import Header, HTTPException, Query

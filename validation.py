@@ -1,12 +1,4 @@
-"""Validation rules for extracted invoice data.
 
-Severity model
---------------
-ERROR -> the record is flagged `needs_review` (a human must look at it).
-WARN / INFO -> shown to the reviewer but do not block the record.
-
-Money is handled with `Decimal` (never float) to avoid rounding artefacts.
-"""
 import re
 from datetime import date, datetime
 from decimal import Decimal, InvalidOperation

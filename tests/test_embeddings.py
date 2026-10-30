@@ -1,4 +1,3 @@
-"""Semantic index logic, tested with a fake embedder (no model download)."""
 import numpy as np
 
 import embeddings
